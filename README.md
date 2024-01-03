@@ -84,7 +84,7 @@ six==1.16.0
 sounddevice==0.4.6  
 Werkzeug==3.0.1        
 
-5.**執行一下指令，安裝所需套件**：
+5.**執行以下指令，安裝所需套件**：
    
     pip install -r requirements.txt    
    
