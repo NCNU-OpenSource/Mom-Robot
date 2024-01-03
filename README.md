@@ -109,10 +109,23 @@ Werkzeug==3.0.1
 
 ### 通過 SSH 連接到樹莓派
 
-     要運行樹莓派上的 `app.py` 文件，請先通過 SSH 連接到你的樹莓派：
+   1.要運行樹莓派上的 `app.py` 文件，請先通過 SSH 連接到你的樹莓派：
 
-   ```bash
-   ssh <USERNAME>@<RASPBERRY_PI_IP>
+  
+      ssh <USERNAME>@<RASPBERRY_PI_IP>
+
+
+   2.導航到文件存放的目錄,連接到樹莓派之後，使用 cd 命令轉到存放 app.py 的目錄：
+
+  
+      cd /path/to/destination
+
+
+   3.運行 app.py,在樹莓派的終端中，運行以下命令來啟動你的應用：
+
+  
+      python3 app.py
+
 
 # 團隊成員  
 廖宇哲  
