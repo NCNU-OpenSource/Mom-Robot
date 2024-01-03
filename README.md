@@ -15,9 +15,25 @@ Flask: 建立網頁以顯示坐姿狀態。
 Python 音訊播放庫: 用於播放錄製的媽媽聲音。
 
 # 安裝和使用
+![image](https://github.com/yuzher33/LSA/assets/151426386/5f071930-e238-4f0c-9990-4df45e9b1770)
+## 安裝指南
 
+在樹莓派上安裝 `opencv-python`, `mediapipe`, `numpy`, 和 `pygame` 需要執行以下步驟。這些庫將使你能夠執行包括圖像處理和人體姿態識別在內的多種功能。
 
-團隊成員
+### 前提條件
+
+確保你的樹莓派的系統是最新的並且已經安裝了 Python。本指南假設你使用的是 Python 3。
+
+### 安裝步驟
+
+1. 開啟你的樹莓派終端。
+
+2. 更新系統包列表：
+   ```bash
+   sudo apt-get update
+   sudo apt-get upgrade
+
+# 團隊成員
 廖宇哲
 定世荷
 蔡秉霖
