@@ -22,8 +22,8 @@ Python 音訊播放庫: 用於播放錄製的媽媽聲音。
 
 ### 前提條件
 
-確保你的樹莓派的系統是最新的並且已經安裝了 Python。本指南假設你使用的是 Python 3。
-
+因爲我們其他方法裝不了，系統環境限制了在外部管理的環境中進行安裝，所以我們在樹莓派裏面創建了
+一個虛擬環境
 ### 安裝步驟
 
 請按照以下步驟在您的樹莓派上安裝 Python 3 和 pip：
@@ -38,39 +38,63 @@ Python 音訊播放庫: 用於播放錄製的媽媽聲音。
    
    ```bash
    sudo apt-get update
-   sudo apt-get upgrade  
+   sudo apt-get upgrade
+   
+3.**開啓樹莓派的終端機，輸入以下指令創建一個虛擬環境**：
+   
+   python3 -m venv myenv   
+   
+4.**啓動及推出虛擬環境**：
+   
+    source myenv/bin/activate
+   
+      deactivate（退出)    
+   
+4.**創建requirements.txt檔，並將所需的工具(套件)寫在requirements.txt檔裏面**：
+   
+absl-py==2.0.0  
+attrs==23.2.0  
+blinker==1.7.0  
+cffi==1.16.0  
+click==8.1.7  
+contourpy==1.2.0  
+cycler==0.12.1  
+Flask==3.0.0  
+flatbuffers==20181003210633  
+fonttools==4.47.0  
+itsdangerous==2.1.2  
+Jinja2==3.1.2  
+kiwisolver==1.4.5  
+MarkupSafe==2.1.3  
+matplotlib==3.8.2  
+mediapipe==0.10.9  
+numpy==1.26.3  
+opencv-contrib-python==4.9.0.80  
+opencv-python==4.9.0.80  
+packaging==23.2  
+pillow==10.2.0  
+pip==23.0.1  
+protobuf==3.20.3  
+pycparser==2.21  
+pygame==2.5.2  
+pyparsing==3.1.1  
+python-dateutil==2.8.2  
+setuptools==66.1.1  
+six==1.16.0  
+sounddevice==0.4.6  
+Werkzeug==3.0.1        
 
-3.**安裝 Python 3**：
+5.**執行一下指令，安裝所需套件**：
    
-    sudo apt-get install python3    
+    pip install -r requirements.txt    
    
-4.**安裝 PIP**：
-   
-    sudo apt-get install python3-pip    
-
-5.**安裝 opencv-python**：
-   
-    pip3 install opencv-python    
-
-6.**安裝 mediapipe**：
-   
-    pip3 install mediapipe    
-
-7.**安裝 numpy**：
-   
-    pip3 install numpy    
-
-8.**安裝 pygame**：
-   
-    pip3 install pygame    
-
 ### 傳輸程式碼到樹莓派
 
 為了運行 MediaPipe 應用，你需要將 你寫好的mediapipe程式碼（我的文件是叫app.py)`app.py` 文件傳輸到樹莓派。以下是通過 SSH 傳輸文件的步驟：
-
+**記得要在樹莓派的虛擬環境下**
 1. **準備你的 `app.py` 文件**。
 
-   確保你的 `app.py` 包含所有必要的 MediaPipe 程式碼並且在你的電腦上是可訪問的。
+   確保你的 `app.py` 包含所有必要的 MediaPipe 程式碼並且在你的電腦上是可訪問的，把app.py文件放到隨便一個目錄(請記得你的目錄,謝謝)
 
 2. **開啟終端或命令提示字元**。
 
@@ -85,10 +109,11 @@ Python 音訊播放庫: 用於播放錄製的媽媽聲音。
 
 ### 通過 SSH 連接到樹莓派
 
-要運行樹莓派上的 `app.py` 文件，請先通過 SSH 連接到你的樹莓派：
+     要運行樹莓派上的 `app.py` 文件，請先通過 SSH 連接到你的樹莓派：
 
-   ssh <USERNAME>@<RASPBERRY_PI_IP>  
-   
+   ```bash
+   ssh <USERNAME>@<RASPBERRY_PI_IP>
+
 # 團隊成員  
 廖宇哲  
 定世荷  
