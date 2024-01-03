@@ -26,13 +26,44 @@ Python 音訊播放庫: 用於播放錄製的媽媽聲音。
 
 ### 安裝步驟
 
-1. 開啟你的樹莓派終端。
+請按照以下步驟在您的樹莓派上安裝 Python 3 和 pip：
 
-2. 更新系統包列表：
+1. **開啟樹莓派終端**。
+   
+   打開您的樹莓派終端，準備輸入安裝命令。
+
+2. **更新系統包列表**：
+
+   在終端中輸入以下命令來更新您的系統包列表和現有的軟件包。
+   
    ```bash
    sudo apt-get update
-   sudo apt-get upgrade
+   sudo apt-get upgrade  
 
+3.**安裝 Python 3**：
+   
+    sudo apt-get install python3    
+   
+4.**安裝 PIP**：
+   
+    sudo apt-get install python3-pip    
+
+5.**安裝 opencv-python**：
+   
+    pip3 install opencv-python    
+
+6.**安裝 mediapipe**：
+   
+    pip3 install mediapipe    
+
+7.**安裝 numpy**：
+   
+    pip3 install numpy    
+
+8.**安裝 pygame**：
+   
+    pip3 install pygame    
+   
 # 團隊成員
 廖宇哲
 定世荷
