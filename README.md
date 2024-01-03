@@ -42,7 +42,7 @@ Python 音訊播放庫: 用於播放錄製的媽媽聲音。
    
 3.**開啓樹莓派的終端機，輸入以下指令創建一個虛擬環境**：
    
-   python3 -m venv myenv   
+      python3 -m venv myenv   
    
 4.**啓動及推出虛擬環境**：
    
