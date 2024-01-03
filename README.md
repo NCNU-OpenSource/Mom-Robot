@@ -63,8 +63,34 @@ Python 音訊播放庫: 用於播放錄製的媽媽聲音。
 8.**安裝 pygame**：
    
     pip3 install pygame    
+
+### 傳輸程式碼到樹莓派
+
+為了運行 MediaPipe 應用，你需要將 你寫好的mediapipe程式碼（我的文件是叫app.py)`app.py` 文件傳輸到樹莓派。以下是通過 SSH 傳輸文件的步驟：
+
+1. **準備你的 `app.py` 文件**。
+
+   確保你的 `app.py` 包含所有必要的 MediaPipe 程式碼並且在你的電腦上是可訪問的。
+
+2. **開啟終端或命令提示字元**。
+
+   在你的本地機器上開啟終端（Linux 或 macOS）或命令提示字元/PowerShell（Windows）。
+
+3. **使用 SCP 傳輸文件**。
+
+   使用 SCP 命令將 `app.py` 傳輸到樹莓派。你將需要替換 `<USERNAME>` 為你的樹莓派的用戶名，`<RASPBERRY_PI_IP>` 為樹莓派的 IP 地址，並且指定正確的文件路徑：
+
+   ```bash
+   scp /path/to/app.py <USERNAME>@<RASPBERRY_PI_IP>:/path/to/destination
+
+### 通過 SSH 連接到樹莓派
+
+要運行樹莓派上的 `app.py` 文件，請先通過 SSH 連接到你的樹莓派：
+
+   ssh <USERNAME>@<RASPBERRY_PI_IP>  
    
-# 團隊成員
-廖宇哲
-定世荷
-蔡秉霖
+# 團隊成員  
+廖宇哲  
+定世荷  
+蔡秉霖  
+張傑然
