@@ -7,10 +7,10 @@
 坐姿監控網頁: 透過Flask建立的網頁，展示Webcam捕捉的影像，並即時展示坐姿狀態和播放聲音的條件。
 
 # 技術和方法
-MediaPipe: 用於人體關節辨識，並利用OpenCV畫出關節之間的連線。
-Time Module: 設定定時提醒。
-Flask: 建立網頁以顯示坐姿狀態。
-subprcocess Popen:用於播放音樂
+## MediaPipe: 用於人體關節辨識，並利用OpenCV畫出關節之間的連線。
+## Time Module: 設定定時提醒。
+## Flask: 建立網頁以顯示坐姿狀態。
+## subprcocess Popen:用於播放音樂
 #Mediapipe的關節點標示
 ![image](https://github.com/yuzher33/LSA/assets/148021569/0121f494-3c08-4e64-a0f9-3bd8a14be182)
 # 安裝和使用
