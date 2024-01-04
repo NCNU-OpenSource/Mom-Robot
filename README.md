@@ -8,16 +8,31 @@
 坐姿監控網頁: 透過Flask建立的網頁，展示Webcam捕捉的影像，並即時展示坐姿狀態和播放聲音的條件。
 
 # 技術和方法
-* MediaPipe: 用於人體關節辨識，並利用OpenCV畫出關節之間的連線。*
-* Time Module: 設定定時提醒。*
-* Flask: 建立網頁以顯示坐姿狀態。*
-* subprocess Popen:用於播放音樂*
+* MediaPipe: 用於人體關節辨識，並利用OpenCV畫出關節之間的連線。
+* Opencv:用於處理圖像相關程式
+* Time Module: 設定定時提醒。
+* Flask: 建立網頁以顯示坐姿狀態。
+* subprocess Popen:用於播放音樂。
 
 # Mediapipe的關節點標示
 ![image](https://github.com/yuzher33/LSA/assets/148021569/0121f494-3c08-4e64-a0f9-3bd8a14be182)
 # 安裝和使用
 ![image](https://github.com/yuzher33/LSA/assets/151426386/367c9d21-7dd0-4316-ac56-d99c16facbe9)
 
+# Usage 
+## 使用gitclone
+### 將git下載下來之後解壓縮，接著指到解壓縮後檔案的路徑
+```bash
+cd path/to/ur_file
+```
+### 下載requirements.txt
+```bash
+pip install -r requirements.txt
+```
+### 執行主程式
+```bash
+python3 app.py
+```
 ## 安裝指南
 
 在樹莓派上安裝 `opencv-python`, `mediapipe`,`flask`需要執行以下步驟。這些庫將使你能夠執行包括圖像處理和人體姿態識別在內的多種功能。
