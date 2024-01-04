@@ -133,6 +133,8 @@ Werkzeug==3.0.1
 **安裝問題，無法如期在樹莓派上安裝套件(必須在樹莓派上架設虛擬環境)**  
 *樹莓派記憶體不足，導致無法正確偵測(延遲超過10秒)*（我們寫的程式跑起來會佔670mb)
 
+# 簡報連結
+https://www.canva.com/design/DAF40kCBqEE/DS0blEr1bFYMjQuJBbWNww/edit
 
 # 團隊分工
 蔡秉霖:撰寫mediapipe程式碼與測試環境  
