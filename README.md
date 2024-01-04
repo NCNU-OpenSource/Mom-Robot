@@ -141,3 +141,7 @@ https://www.canva.com/design/DAF40kCBqEE/DS0blEr1bFYMjQuJBbWNww/edit
 定世荷:撰寫mediapipe程式碼與測試環境  
 廖宇哲:製作簡報，設定樹莓派，撰寫github  
 張傑然:製作簡報，設定樹莓派，下載套件  
+
+# Refrences
+* https://www.youtube.com/watch?v=06TE_U21FK4 *
+* Chatgpt
