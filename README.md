@@ -7,6 +7,10 @@
 坐姿檢測: 利用Webcam偵測使用者的坐姿，並透過媽媽的聲音提醒糾正坐姿。
 坐姿監控網頁: 透過Flask建立的網頁，展示Webcam捕捉的影像，並即時展示坐姿狀態和播放聲音的條件。
 
+# 使用設備
+* Respberry pi 3 (From TA NT$ 0)
+* WebCam*1(from 張晏誠學長 NT$ 0)
+  
 # 技術和方法
 * MediaPipe: 用於人體關節辨識，並利用OpenCV畫出關節之間的連線。
 * Opencv:用於處理圖像相關程式
@@ -20,7 +24,7 @@
 ![image](https://github.com/yuzher33/LSA/assets/151426386/367c9d21-7dd0-4316-ac56-d99c16facbe9)
 
 # Usage 
-## 使用gitclone
+## 使用gitclone(Ubuntu用戶)
 ### 將git下載下來之後解壓縮，接著指到解壓縮後檔案的路徑
 ```bash
 cd path/to/ur_file
@@ -33,12 +37,9 @@ pip install -r requirements.txt
 ```bash
 python3 app.py
 ```
-## 安裝指南
-
-在樹莓派上安裝 `opencv-python`, `mediapipe`,`flask`需要執行以下步驟。這些庫將使你能夠執行包括圖像處理和人體姿態識別在內的多種功能。
+## 樹梅派用戶
 
 ### 前提條件
-
 因爲我們其他方法裝不了，系統環境限制了在外部管理的環境中進行安裝，所以我們在樹莓派裏面創建了
 一個虛擬環境
 ### 安裝步驟
@@ -56,94 +57,48 @@ python3 app.py
    ```bash
    sudo apt-get update
    sudo apt-get upgrade
+   ```
    
 3.**開啓樹莓派的終端機，輸入以下指令創建一個虛擬環境**：
-   
-      python3 -m venv myenv   
-   
-4.**啓動及推出虛擬環境**：
-   
-    source myenv/bin/activate
-   
-      deactivate（退出)    
-   
-4.**創建requirements.txt檔，並將所需的工具(套件)寫在requirements.txt檔裏面**：
-   
-absl-py==2.0.0  
-attrs==23.2.0  
-blinker==1.7.0  
-cffi==1.16.0  
-click==8.1.7  
-contourpy==1.2.0  
-cycler==0.12.1  
-Flask==3.0.0  
-flatbuffers==20181003210633  
-fonttools==4.47.0  
-itsdangerous==2.1.2  
-Jinja2==3.1.2  
-kiwisolver==1.4.5  
-MarkupSafe==2.1.3  
-matplotlib==3.8.2  
-mediapipe==0.10.9  
-numpy==1.26.3  
-opencv-contrib-python==4.9.0.80  
-opencv-python==4.9.0.80  
-packaging==23.2  
-pillow==10.2.0  
-pip==23.0.1  
-protobuf==3.20.3  
-pycparser==2.21  
-pygame==2.5.2  
-pyparsing==3.1.1  
-python-dateutil==2.8.2  
-setuptools==66.1.1  
-six==1.16.0  
-sounddevice==0.4.6  
-Werkzeug==3.0.1        
-
-5.**執行以下指令，安裝所需套件**：
-   
-    pip install -r requirements.txt    
-   
-### 傳輸程式碼到樹莓派
-
-為了運行 MediaPipe 應用，你需要將 你寫好的mediapipe程式碼（我的文件是叫app.py)`app.py` 文件傳輸到樹莓派。以下是通過 SSH 傳輸文件的步驟：
-**記得要在樹莓派的虛擬環境下**
-1. **準備你的 `app.py` 文件**。
-
-   確保你的 `app.py` 包含所有必要的 MediaPipe 程式碼並且在你的電腦上是可訪問的，把app.py文件放到隨便一個目錄(請記得你的目錄,謝謝)
-
-2. **開啟終端或命令提示字元**。
-
-   在你的本地機器上開啟終端（Linux 或 macOS）或命令提示字元/PowerShell（Windows）。
-
-3. **使用 SCP 傳輸文件**。
-
-   使用 SCP 命令將 `app.py` 傳輸到樹莓派。你將需要替換 `<USERNAME>` 為你的樹莓派的用戶名，`<RASPBERRY_PI_IP>` 為樹莓派的 IP 地址，並且指定正確的文件路徑：
-
    ```bash
-   scp /path/to/app.py <USERNAME>@<RASPBERRY_PI_IP>:/path/to/destination
+   python3 -m venv myenv   
+   ```   
+4.**啓動虛擬環境**：
+   啟動:
+   ```bash
+   source myenv/bin/activate
+   ```
+5.**檔案下載在別台主機**:
+在別台主機使用gitclone下載壓縮檔後解壓縮到想要的路徑
 
-### 通過 SSH 連接到樹莓派
+6.**將所需文件scp到自己想要的路徑**:
+在樹梅派上用scp將檔案載到自己想要的路徑(要在虛擬環境中scp)
+```bash
+scp  目標用戶名@目標ip:/目標檔案的路徑/檔名  /path/you/want/to/download
+```
 
-   **樹莓派連的網路和你電腦連的網路要一樣，這樣ssh才連得上！！！！！！！**
+7.**進入檔案所在位置**
+```bash
+cd /path/to/your_file
+```
    
-   1.要運行樹莓派上的 `app.py` 文件，請先通過 SSH 連接到你的樹莓派：
+8.**下載requirements.txt**
+```bash
+pip install -r requirements.txt
+```
+9.**執行主程式**
+```bash
+python3 app.py
+```
 
-  
-      ssh <USERNAME>@<RASPBERRY_PI_IP>
+* 若您想要退出虛擬環境，則輸入以下指令:
+```bash
+deactivate（退出)    
+```
 
+# UI
+無論是樹梅派用戶或是Ubuntu用戶，在執行 `app.py`後，會顯示網頁在哪個`ipdress:埠口`上，接著去瀏覽器輸入網址後即可連到我們的網頁
 
-   2.導航到文件存放的目錄,連接到樹莓派之後，使用 cd 命令轉到存放 app.py 的目錄：
-
-  
-      cd /path/to/destination
-
-
-   3.運行 app.py,在樹莓派的終端中，運行以下命令來啟動你的應用：
-
-  
-      python3 app.py
 
 # 遇到的困難  
 **安裝問題，無法如期在樹莓派上安裝套件(必須在樹莓派上架設虛擬環境)**  
@@ -153,10 +108,20 @@ Werkzeug==3.0.1
 https://www.canva.com/design/DAF40kCBqEE/DS0blEr1bFYMjQuJBbWNww/edit
 
 # 團隊分工
-蔡秉霖:撰寫mediapipe程式碼與測試環境  
-定世荷:撰寫mediapipe程式碼與測試環境  
-廖宇哲:製作簡報，設定樹莓派，撰寫github  
-張傑然:製作簡報，設定樹莓派，下載套件  
+* 110213015蔡秉霖
+* * 撰寫mediapipe程式碼
+* * 樹梅派測試環境
+* 110213055定世荷
+* * 撰寫mediapipe程式碼
+* * 網頁程式碼編寫
+*  110213034廖宇哲
+* *製作簡報
+* *設定樹莓派
+* *撰寫github  
+* 110213065張傑然
+* * 設定樹莓派
+* * 下載套件  
+* * 製作簡報
 
 # Refrences
 * https://www.youtube.com/watch?v=06TE_U21FK4 *
