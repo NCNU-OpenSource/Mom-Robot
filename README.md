@@ -109,19 +109,19 @@ https://www.canva.com/design/DAF40kCBqEE/DS0blEr1bFYMjQuJBbWNww/edit
 
 # 團隊分工
 * 110213015蔡秉霖
- * 撰寫mediapipe程式碼
- * 樹梅派測試環境
+  * 撰寫mediapipe程式碼
+  * 樹梅派測試環境
 * 110213055定世荷
- * 撰寫mediapipe程式碼
- * 網頁程式碼編寫
+  * 撰寫mediapipe程式碼
+  * 網頁程式碼編寫
 *  110213034廖宇哲
- *製作簡報
- *設定樹莓派
- *撰寫github  
+  * 製作簡報
+  * 設定樹莓派
+  * 撰寫github  
 * 110213065張傑然
- * 設定樹莓派
- * 下載套件  
- * 製作簡報
+  * 設定樹莓派
+  * 下載套件  
+  * 製作簡報
 
 # Refrences
 * https://www.youtube.com/watch?v=06TE_U21FK4 *
