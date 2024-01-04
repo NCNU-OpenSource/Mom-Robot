@@ -10,7 +10,9 @@
 MediaPipe: 用於人體關節辨識，並利用OpenCV畫出關節之間的連線。
 Time Module: 設定定時提醒。
 Flask: 建立網頁以顯示坐姿狀態。
-subprcocess:用於播放音樂
+subprcocess Popen:用於播放音樂
+#Mediapipe的關節點標示
+![image](https://github.com/yuzher33/LSA/assets/148021569/0121f494-3c08-4e64-a0f9-3bd8a14be182)
 # 安裝和使用
 ![image](https://github.com/yuzher33/LSA/assets/151426386/367c9d21-7dd0-4316-ac56-d99c16facbe9)
 
