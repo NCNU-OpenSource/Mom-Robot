@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>老媽機器人</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        img {
+            max-width: 90%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+        }
+        .timer {
+            font-size: 24px; / 增加計時器的字體大小 
+/
+            margin: 20px 0; / 添加一些邊距 
+/
+        }
+        #reset-timer-button {
+            display: none; / 初始状态隐藏按钮 
+/
+            font-size: 20px; / 增加按钮的字体大小 
+/
+            padding: 10px 20px; / 添加内边距以增加按钮大小 
+/
+            background-color: #4CAF50; / 按钮背景色 
+/
+            color: white; / 文字颜色 
+/
+            border: none; / 移除边框 
+/
+            border-radius: 5px; / 圆角边框 
+/
+            cursor: pointer; / 鼠标悬停时的指针样式 
+/
+            margin: 20px auto; / 添加上下外边距并水平居中 
+/
+            display: block; / 使按钮以块级元素显示 
+/
+        }
+
+        #reset-timer-button:hover {
+            background-color: #45a049; / 鼠標懸停時的背景色變化 
+/
+        }
+    </style>
+</head>
+<body>
+    <h1>老媽機器人-還敢駝背啊</h1>
+    <h1>15秒後即將開始偵測，請先將鏡頭擺好且坐端正（要確定頭和屁股都在）</h1>
+    <div class="timer" id="extra-timer-display">0:15</div>
+    
+    <img src="{{ url_for('video_feed') }}" alt="Video stream not available">
+    <h1>喝水倒計時</h1>
+    <div class="timer" id="main-timer-display">1:00</div>
+     <!-- 新增的计时器 -->
+    <button id="reset-timer-button" style="display: none;">去喝水！</button>
+    <script src="{{ url_for('static', filename='jsjs.js') }}"></script>
+</body>
+</html>
+
