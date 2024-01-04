@@ -114,7 +114,7 @@ https://www.canva.com/design/DAF40kCBqEE/DS0blEr1bFYMjQuJBbWNww/edit
 * 110213055定世荷
   * 撰寫mediapipe程式碼
   * 網頁程式碼編寫
-*  110213034廖宇哲
+* 110213034廖宇哲
   * 製作簡報
   * 設定樹莓派
   * 撰寫github  
@@ -126,3 +126,9 @@ https://www.canva.com/design/DAF40kCBqEE/DS0blEr1bFYMjQuJBbWNww/edit
 # Refrences
 * https://www.youtube.com/watch?v=06TE_U21FK4 *
 * Chatgpt
+
+# 特別感謝
+感謝 **吳梓睿** 助教熬兩天夜跟我們一起debug
+感謝 **陳柏瑋** 助教願意借我們Ubuntu作業系統的筆電以及提供我們各種套件的建議
+感謝 **張晏誠** 借我們Webcam <3
+感謝 **王詠平** 助教幫助我們網頁上的問題
